@@ -1,0 +1,31 @@
+<template name="afFileUpload">
+  <!---form id="ufs_form">
+    <div class="bar">
+        <button name="upload" type="button" class="btn-upload">Upload</button>
+        <input type="url" name="url" placeholder="http://...">
+        <button name="import" type="button" class="btn-upload">Import from URL</button>
+    </div>
+  </form-->
+  <input value="{{showValue}}" type="hidden" {{this.atts}}>
+  {{#with uploadedFile}}
+    <div class= "img-uploaded">
+      <img class="img-thumbnail img-af" src="{{this.path}}"/>
+      <span data-remove-file class="nav-item trash">
+        <i class="fa fa-trash" title={{_ 'remove'}}></i>
+      </span>
+    <!--button class="btn btn-white btn-xs js-delete" title="{{_ 'remove'}}"><i class="fa fa-trash"></i> {{_ 'remove'}}</button-->
+    </div>
+    <!--a data-reset-file href="#" style="display:none">Reset</a>
+    <a data-remove-file href="#">Remove</a-->
+    <span class="text-warning">{{#if valueHasChanged}}{{_ 'youNeedToSaveYourChanges'}}{{/if}}</span>
+  {{else}}
+    {{#with currentUpload}}
+      Uploading <b>{{getFile.name}}</b>:
+      <progress value="{{getProgress}}" max="100"></progress>
+      &nbsp;
+      <span class="progress">{{getProgress}}%</span>
+    {{else}}
+      <input data-files-collection-upload class="form-control af-file-upload-capture" type="file" />
+    {{/with}}
+  {{/with}}>
+</template>
