@@ -3,6 +3,7 @@ Autoform File
 
 ### Description
 Upload and manage files with autoForm via [`jalik:ufs`](https://github.com/jalik/jalik-ufs/).
+Inspired by [`ostrio:autoform-files`]
 
 ### Quick Start:
 
@@ -39,7 +40,6 @@ Schemas.Posts = new SimpleSchema({
     autoform: {
       afFieldInput: {
         type: 'fileUpload',
-        collection: 'Images',
       }
     }
   }
@@ -48,6 +48,9 @@ Schemas.Posts = new SimpleSchema({
 Posts.attachSchema(Schemas.Posts);
 ```
 
-The `collection` property must be the same as name of your *FilesCollection* (*case-sensitive*), `Images` in our case.
+Generate the form with `{{> quickform}}` or `{{#autoform}}` as usual
 
-Generate the form with `{{> quickform}}` or `{{#autoform}}` e.g.:
+### Limitations:
+
+ - Package expects that you have an 'uploads' collection, and a store called 'uploads'.
+Feel free to fork it, or make it configurable, which collection it uploads into.
