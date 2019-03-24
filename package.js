@@ -14,16 +14,16 @@ Package.onUse(function(api) {
     'ecmascript',
     'underscore',
     'mongo',
-    'reactive-var',
-    'templating@1.3.2',
+    'templating',
     'aldeed:autoform',
     'dburles:mongo-collection-instances',
+    'manuel:viewmodel',
     'jalik:ufs'
   ]);
 
   api.addFiles([
     'lib/client/autoform.js',
-    'lib/client/fileUpload.html',
-    'lib/client/fileUpload.js',
+    'lib/client/af-file-upload.html',
+    'lib/client/af-file-upload.js',
   ], 'client');
 });
