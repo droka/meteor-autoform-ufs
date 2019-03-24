@@ -6,26 +6,28 @@
         <button name="import" type="button" class="btn-upload">Import from URL</button>
     </div>
   </form-->
-  <input value="{{showValue}}" type="hidden" {{this.atts}}>
-  {{#with uploadedFile}}
-    <div class= "img-uploaded">
-      <img class="img-thumbnail img-af" src="{{this.path}}"/>
-      <span data-remove-file class="nav-item trash">
-        <i class="fa fa-trash" title={{_ 'remove'}}></i>
-      </span>
-    <!--button class="btn btn-white btn-xs js-delete" title="{{_ 'remove'}}"><i class="fa fa-trash"></i> {{_ 'remove'}}</button-->
-    </div>
-    <!--a data-reset-file href="#" style="display:none">Reset</a>
-    <a data-remove-file href="#">Remove</a-->
-    <span class="text-warning">{{#if valueHasChanged}}{{_ 'youNeedToSaveYourChanges'}}{{/if}}</span>
-  {{else}}
-    {{#with currentUpload}}
-      Uploading <b>{{getFile.name}}</b>:
-      <progress value="{{getProgress}}" max="100"></progress>
+  <input value="{{viewmodelValue}}" type="{{textOrHidden}}" {{this.atts}}>
+  {{#if viewmodelValue}}
+    {{#if currentUpload}}
+      Uploading <b>{{currentUpload.getFile.name}}</b>:
+      <progress value="{{currentProgress}}" max="100"></progress>
       &nbsp;
-      <span class="progress">{{getProgress}}%</span>
+      <span class="progress">{{currentProgress}}%</span>
     {{else}}
-      <input data-files-collection-upload class="form-control af-file-upload-capture" type="file" />
-    {{/with}}
-  {{/with}}>
+      <div class= "img-uploaded">
+        <img class="img-thumbnail img-af" src="{{viewmodelFile.path}}"/>
+        <span data-remove-file class="nav-item trash">
+          <i class="fa fa-trash" title={{_ 'remove'}}></i>
+        </span>
+      <!--button class="btn btn-white btn-xs js-delete" title="{{_ 'remove'}}"><i class="fa fa-trash"></i> {{_ 'remove'}}</button-->
+      </div>
+      <!--a data-reset-file href="#" style="display:none">Reset</a>
+      <a data-remove-file href="#">Remove</a-->
+    {{/if}}
+  {{else}}
+    <input data-files-collection-upload class="form-control af-file-upload-capture" type="file" />
+  {{/if}}
+  {{#if valueHasChanged}}
+  <span class="text-warning">{{_ 'youNeedToSaveYourChanges'}}</span>
+  {{/if}}
 </template>
