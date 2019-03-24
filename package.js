@@ -22,6 +22,7 @@ Package.onUse(function(api) {
   ]);
 
   api.addFiles([
+    'lib/client/link-format.js',
     'lib/client/autoform.js',
     'lib/client/af-file-upload.html',
     'lib/client/af-file-upload.js',

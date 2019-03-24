@@ -40,6 +40,7 @@ Schemas.Posts = new SimpleSchema({
     autoform: {
       afFieldInput: {
         type: 'fileUpload',
+        collection: 'images',
       }
     }
   }
@@ -50,7 +51,4 @@ Posts.attachSchema(Schemas.Posts);
 
 Generate the form with `{{> quickform}}` or `{{#autoform}}` as usual
 
-### Limitations:
-
- - Package expects that you have an 'uploads' collection, and a store called 'uploads'.
-Feel free to fork it, or make it configurable, which collection it uploads into.
+You also have to have a store by the same name ('images' in this example).

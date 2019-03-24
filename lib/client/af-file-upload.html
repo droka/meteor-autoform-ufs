@@ -1,6 +1,6 @@
 <template name="afFileUpload">
   {{#if value}}
-    {{#if currentUpload}}
+    {{#if currentProgress}}
       Uploading <b>{{currentUpload.getFile.name}}</b>:
       <progress value="{{currentProgress}}" max="100"></progress>
       &nbsp;
@@ -13,6 +13,7 @@
         </button>
       </div>
       <a data-reset-file href="#" style="display:none">Reset</a>
+      <!--span class="text-muted">{{_ 'needToRemoveCurrentToAddNew'}}</span-->
     {{/if}}
   {{/if}}
   <div class="row">
