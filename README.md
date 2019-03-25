@@ -3,7 +3,16 @@ Autoform File
 
 ### Description
 Upload and manage files with autoForm via [`jalik:ufs`](https://github.com/jalik/jalik-ufs/).
-Inspired by [`ostrio:autoform-files`](https://github.com/VeliovGroup/meteor-autoform-file/).
+
+This version allows you to choose between using an external link, or Uploading a file to be stored on the server in a specified collection.
+
+Looks like this before uploading or specifying a link:
+
+![](images/before.png)
+
+After uploading or specifying a link:
+
+![](images/after.png)
 
 ### Quick Start:
 
@@ -51,4 +60,8 @@ Posts.attachSchema(Schemas.Posts);
 
 Generate the form with `{{> quickform}}` or `{{#autoform}}` as usual
 
-You also have to have a store by the same name ('images' in this example).
+You also have to have a *Store* by the same name as your collection
+(so with the name 'images' in this example).
+
+Code inspired by [`ostrio:autoform-files`](https://github.com/VeliovGroup/meteor-autoform-file/).
+
