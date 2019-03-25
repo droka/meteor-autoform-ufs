@@ -1,11 +1,11 @@
 <template name="afFileUpload">
-  {{#if value}}
-    {{#if currentProgress}}
-      Uploading <b>{{currentUpload.getFile.name}}</b>:
-      <progress value="{{currentProgress}}" max="100"></progress>
-      &nbsp;
-      <span class="progress">{{currentProgress}}%</span>
-    {{else}}
+  {{#if currentProgress}}
+    Uploading <b>{{currentUpload.getFile.name}}</b>:
+    <progress value="{{currentProgress}}" max="100"></progress>
+    &nbsp;
+    <span class="progress">{{currentProgress}}%</span>
+  {{else}}
+    {{#if value}}
       <div class= "img-uploaded">
         <img class="img-thumbnail img-af" src="{{value}}"/>
         <button data-remove-file class="btn btn-xs btn-default">
