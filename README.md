@@ -3,7 +3,7 @@ Autoform File
 
 ### Description
 Upload and manage files with autoForm via [`jalik:ufs`](https://github.com/jalik/jalik-ufs/).
-Inspired by [`ostrio:autoform-files`]
+Inspired by [`ostrio:autoform-files`](https://github.com/VeliovGroup/meteor-autoform-file/).
 
 ### Quick Start:
 
