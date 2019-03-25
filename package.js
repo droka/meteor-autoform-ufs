@@ -14,11 +14,11 @@ Package.onUse(function(api) {
     'ecmascript',
     'underscore',
     'mongo',
-    'templating',
-    'aldeed:autoform',
-    'dburles:mongo-collection-instances',
-    'manuel:viewmodel',
-    'jalik:ufs'
+    'templating@1.3.2',
+    'aldeed:autoform@5.8.1',
+    'dburles:mongo-collection-instances@0.3.5',
+    'manuel:viewmodel@6.3.4',
+    'jalik:ufs@0.7.4_1'
   ]);
 
   api.addFiles([
