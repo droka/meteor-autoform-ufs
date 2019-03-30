@@ -2,7 +2,7 @@ Package.describe({
   name: 'droka:autoform-ufs',
   summary: 'File upload for AutoForm using jalik:ufs',
   description: 'File upload for AutoForm using jalik:ufs',
-  version: '0.1.0',
+  version: '0.2.0',
   git: 'https://github.com/droka/meteor-autoform-ufs.git'
 });
 
@@ -27,4 +27,8 @@ Package.onUse(function(api) {
     'lib/client/af-file-upload.html',
     'lib/client/af-file-upload.js',
   ], 'client');
+});
+
+Npm.depends({
+  'compress.js': '1.1.2'
 });
