@@ -2,7 +2,7 @@ Package.describe({
   name: 'droka:autoform-ufs',
   summary: 'File upload for AutoForm using jalik:ufs',
   description: 'File upload for AutoForm using jalik:ufs',
-  version: '0.2.0',
+  version: '0.2.1',
   git: 'https://github.com/droka/meteor-autoform-ufs.git'
 });
 
